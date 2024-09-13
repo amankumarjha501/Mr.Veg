@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="data:image/jpeg;base64,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" type="image/x-icon">
+    <title>Mr. Veg Menu</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: BLACK;
+            background-image:url('https://img.freepik.com/premium-photo/fast-food-banner-with-pizza-momos-burger-fries-cold-drinks_349936-1148.jpg?w=740');
+            position: absolute;
+            background-repeat: no-repeat;
+            background-position: center; /* Center the image */
+            background-attachment: fixed; /* Keep the image fixed in place when scrolling */
+            background-size: contain; /* Adjust this depending on how you want the image to fit */
+            height: 100vh; /* Full viewport height */
+            width: 100vw; /* Full viewport width */
+        }
+        .container1{
+            max-width: 800px;
+            max-height: 500px;
+            margin: 0px auto;
+            padding: 20px;
+            background-color: WHITE;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            color: WHITE;
+            border-radius:50px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0px auto;
+            padding: 20px;
+            background-color: rgba(0, 0, 10, 0.5); ;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            color: WHITE;
+            opacity: 1;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            border-color: rgb(57,57,57);
+            border-radius:50px;
+            
+        }
+
+        th, td {
+            text-align: left;
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+            color:WHITE;
+            border:none;
+            }
+
+        th {
+            background-color: rgb(57,57,57);
+            font-weight: bold;
+            color: ORANGE;
+        }
+
+        .category {
+            text-align: center;
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .price {
+            text-align: right;
+        }
+    </style>
+</head>
+<body><img src="data:image/jpeg;base64,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"
+    style="max-width=100px;max-height:100px;border-radius:150px;position:fixed;opacity:0.6;right:20px">
+    <div class="container1">
+    <img src="https://t3.ftcdn.net/jpg/06/16/85/60/240_F_616856040_zCvPMQkPFOWsVb3Hxo7mQUYzlzciFCZs.jpg"
+    style="max-width=400px">
+    <h1 class="text-center"><b style="color:ORANGE">Mr.</b><b style="color:GREEN"> Veg</b></h1></div>
+    
+    <div class="container">
+        <h3 class="text-center"> Menu</h3>
+
+        <div class="category text-center">Steam</div>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Item</th>
+                    <th class="price">Price</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Soya Momo</td>
+                    <td class="price">50</td>
+                </tr>
+                <tr>
+                    <td>Veg Momo</td>
+                    <td class="price">60</td>
+                </tr>
+                <tr>
+                    <td>Corn Momo</td>
+                    <td class="price">70</td>
+                </tr>
+                <tr>
+                    <td>Mushroom Momo</td>
+                    <td class="price">70</td>
+                </tr>
+                <tr>
+                    <td>Paneer Momo</td>
+                    <td class="price">80</td>
+                </tr>
+                <tr>
+                    <td>Corn Cheese Momo</td>
+                    <td class="price">90</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="category text-center">Fried</div>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Item</th>
+                    <th class="price">Price</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Soya Momo</td>
+                    <td class="price">60</td>
+                </tr>
+                <tr>
+                    <td>Veg Momo</td>
+                    <td class="price">70</td>
+                </tr>
+                <tr>
+                    <td>Corn Momo</td>
+                    <td class="price">80</td>
+                </tr>
+                <tr>
+                    <td>Mushroom Momo</td>
+                    <td class="price">80</td>
+                </tr>
+                <tr>
+                    <td>Paneer Momo</td>
+                    <td class="price">90</td>
+                </tr>
+                <tr>
+                    <td>Corn Cheese Momo</td>
+                    <td class="price">100</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="category text-center">440 Volts</div>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Item</th>
+                    <th class="price">Price</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Soya Momo</td>
+                    <td class="price">100</td>
+                </tr>
+                <tr>
+                    <td>Veg Momo</td>
+                    <td class="price">110</td>
+                </tr>
+                <tr>
+                    <td>Corn Momo</td>
+                    <td class="price">110</td>
+                </tr>
+                <tr>
+                    <td>Mushroom Momo</td>
+                    <td class="price">110</td>
+                </tr>
+                <tr>
+                    <td>Paneer Momo</td>
+                    <td class="price">120</td>
+                </tr>
+                <tr>
+                    <td>Corn Cheese Momo</td>
+                    <td class="price">130</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="category text-center">Creamy</div>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Item</th>
+                    <th class="price">Price</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Soya Momo</td>
+                    <td class="price">110</td>
+                </tr>
+                <tr>
+                    <td>Veg Momo</td>
+                    <td class="price">120</td>
+                </tr>
+                <tr>
+                    <td>Corn Momo</td>
+                    <td class="price">120</td>
+                </tr>
+                <tr>
+                    <td>Mushroom Momo</td>
+                    <td class="price">130</td>
+                </tr>
+                <tr>
+                    <td>Paneer Momo</td>
+                    <td class="price">140</td>
+                </tr>
+                <tr>
+                    <td>Corn Cheese Momo</td>
+                    <td class="price">150</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="category text-center">Kurkure</div>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Item</th>
+                    <th class="price">Price</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Soya Momo</td>
+                    <td class="price">140</td>
+                </tr>
+                <tr>
+                    <td>Veg Momo</td>
+                    <td class="price">150</td>
+                </tr>
+                <tr>
+                    <td>Corn Momo</td>
+                    <td class="price">160</td>
+                </tr>
+                <tr>
+                    <td>Mushroom Momo</td>
+                    <td class="price">160</td>
+                </tr>
+                <tr>
+                    <td>Paneer Momo</td>
+                    <td class="price">160</td>
+                </tr>
+                <tr>
+                    <td>Corn Cheese Momo</td>
+                    <td class="price">180</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="category text-center">Chilli</div>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Item</th>
+                    <th class="price">Price</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Soya Momo</td>
+                    <td class="price">140</td>
+                </tr>
+                <tr>
+                    <td>Veg Momo</td>
+                    <td class="price">150</td>
+                </tr>
+                <tr>
+                    <td>Corn Momo</td>
+                    <td class="price">160</td>
+                </tr>
+                <tr>
+                    <td>Mushroom Momo</td>
+                    <td class="price">160</td>
+                </tr>
+                <tr>
+                    <td>Paneer Momo</td>
+                    <td class="price">160</td>
+                </tr>
+                <tr>
+                    <td>Corn Cheese Momo</td>
+                    <td class="price">180</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="category text-center">Burger</div>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Item</th>
+                    <th class="price">Price</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Momo Burger</td>
+                    <td class="price">30</td>
+                </tr>
+                <tr>
+                    <td>Veg Burger</td>
+                    <td class="price">40</td>
+                </tr>
+                <tr>
+                    <td>Paneer Burger</td>
+                    <td class="price">60</td>
+                </tr>
+                <tr>
+                    <td>Paneer Cheese Burger</td>
+                    <td class="price">75</td>
+                </tr>
+                <tr>
+                    <td>Veg Cheese Burger</td>
+                    <td class="price">55</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="category text-center">Sandwich</div>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Item</th>
+                    <th class="price">Price</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Veg Grilled Sandwich</td>
+                    <td class="price">40</td>
+                </tr>
+                <tr>
+                    <td>Veg Cheese Grilled Sandwich</td>
+                    <td class="price">55</td>
+                </tr>
+                <tr>
+                    <td>Cheese Corn Sandwich</td>
+                    <td class="price">65</td>
+                </tr>
+                <tr>
+                    <td>Paneer Tandoori Sandwich</td>
+                    <td class="price">70</td>
+                </tr>
+                <tr>
+                    <td>Spicy Veg Sandwich</td>
+                    <td class="price">50</td>
+                </tr>
+                <tr>
+                    <td>Spicy Veg Cheese Grilled Sandwich</td>
+                    <td class="price">70</td>
+                </tr>
+                <tr>
+                    <td>Paneer Tandoori Cheese</td>
+                    <td class="price">85</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="category text-center">French Fries</div>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Item</th>
+                    <th class="price">Price</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>French Fries Simply Salt</td>
+                    <td class="price">50</td>
+                </tr>
+                <tr>
+                    <td>Masala French Fries</td>
+                    <td class="price">60</td>
+                </tr>
+                <tr>
+                    <td>Peri Peri French Fries</td>
+                    <td class="price">80</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="category text-center">Potato Twister</div>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Item</th>
+                    <th class="price">Price</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Masala Potato Twister</td>
+                    <td class="price">50</td>
+                </tr>
+                <tr>
+                    <td>Peri Peri Potato Twister</td>
+                    <td class="price">60</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <footer><center>
+        <div style="width:180px;height:30px;color:white;background-color:BLACK;border-radius:10px;border-color:WHITE;"><p style="color:WHITE"><i class="fas fa-phone"></i> +91 7070808307</p></div>
+        <p style="color:GREY">&copy; 2024 Mr. Veg. All rights reserved.</p></center>
+        <p style="color:Grey;font-size:10px">Viewing Page</p>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js"></script>
+</body>
+</html>
